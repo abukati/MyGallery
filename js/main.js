@@ -60,4 +60,3 @@ function renderModal(id) {
    $('.dismiss').click(() => $('.portfolio-modal').hide().css('opacity', 0))
    $('.checkout').click(() => window.open(project.url))
 }
-
