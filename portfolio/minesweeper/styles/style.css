@@ -1,0 +1,240 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset,
+form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed,
+footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+body {
+  background-image: url("../misc/imgs/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.difficulty-selector {
+  display: inline-block;
+  position: relative;
+  margin: 3em 2em;
+}
+
+.difficulty-selector::after {
+  content: '>';
+  font: 20px 'Consolas', monospace;
+  font-weight: 900;
+  color: black;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-top: 9px;
+  position: absolute;
+  right: 8px;
+}
+
+.difficulty-selector select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.difficulty-selector select option {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.difficulty-selector select:hover {
+  cursor: pointer;
+}
+
+.game-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top-indicators, .bottom-indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: inherit;
+  height: 30px;
+  font-size: .9em;
+  font-weight: 700;
+}
+
+.bombs p {
+  font-size: 1.3em;
+}
+
+.bombs p img {
+  width: 25px;
+}
+
+.board-indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  background-color: silver;
+  border-radius: 5px 5px 0 0;
+}
+
+.board-indicators .lives {
+  margin-left: 3px;
+  width: 20%;
+}
+
+.board-indicators .smiley {
+  margin-top: 5px;
+}
+
+.board-indicators .smiley img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.board-indicators .hints {
+  width: 20%;
+}
+
+.board-indicators .hints img {
+  cursor: pointer;
+}
+
+table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: silver;
+  border: 3px solid silver;
+  border-radius: 0 0 5px 5px;
+}
+
+tr {
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+td {
+  width: 35px;
+  height: 35px;
+  font-size: 1em;
+  font-weight: 900;
+  text-align: center;
+  vertical-align: middle;
+  background-color: grey;
+  border: 2.5px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+td img {
+  width: 33px;
+  height: 32px;
+  display: block;
+  margin: 0 auto;
+}
+
+.clicked {
+  background-color: white;
+  border: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.scoreboard {
+  height: 200px;
+  margin-left: 3em;
+  font-size: 1em;
+  font-weight: 600;
+}
+/*# sourceMappingURL=style.css.map */

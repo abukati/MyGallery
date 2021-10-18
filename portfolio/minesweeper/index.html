@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles/style.css">
+   <title>Minesweeper</title>
+</head>
+
+<body onload="initGame()">
+   
+   <div class="container">
+
+      <div class="difficulty-selector">
+         <select name="difficulty" id="difficulty">
+            <option value="4" selected>Begginer (4x4)</option>
+            <option value="8">Medium (8x8)</option>
+            <option value="12">Expert (12x12)</option>
+            <option value="custom">Custom</option>
+            <option value="7th">7 Boom</option>
+         </select>
+      </div>
+
+      <div class="game-content">
+         <div class="top-indicators">
+            <div class="bombs"></div>
+            <div class="timer"></div>
+         </div>
+         <div class="board-items">
+            <div class="board-indicators">
+               <div class="lives"></div>
+               <div class="smiley"></div>
+               <div class="hints"></div>
+            </div>
+            <div class="game-board">
+               
+            </div>
+            <div class="bottom-indicators">
+               <div class="safe-click"><p></p></div>
+               <div class="undo"><p><button onclick="undoMove()">undo</button></p></div>
+            </div>
+         </div>
+      </div>
+      
+      <div class="scoreboard">
+         <div class="best-scores">
+            <p>Best scores for <span>begginer</span> level</p>
+            <ul>
+
+            </ul>
+         </div>
+      </div>
+
+   </div>
+
+   <script src="js/modules/utils.js"></script>
+   <script src="js/game.js"></script>
+   <script src="js/mines.js"></script>
+   <script src="js/board.js"></script>
+   <script src="js/controllers.js"></script>
+   <script src="js/helpers.js"></script>
+   <script src="js/scoreboard.js"></script>
+</body>
+</html>

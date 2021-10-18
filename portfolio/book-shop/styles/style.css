@@ -1,0 +1,7 @@
+.id:hover, .title:hover, .price:hover { 
+   cursor: pointer;
+}
+
+img {
+   width: 300px;
+}

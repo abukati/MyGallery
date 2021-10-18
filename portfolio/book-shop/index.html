@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link rel="stylesheet" href="styles/style.css">
+   <link rel="stylesheet" href="styles/stars.css">
+   <title>Book shop</title>
+</head>
+<body onload="onInit()">
+   <div class="container">
+
+      <button onclick="onAddBook()" class="btn btn-outline-primary btn-sm m-3">Create new book</button>
+      <div class="create-book-modal input-group mb-3" hidden>
+         <form class="add-book-form">
+            <div class="input-group mb-3">
+               <span class="input-group-text">Title:</span>
+               <input class="form-control" id="title" name="title" type="text" required>
+            </div>
+            <div class="input-group mb-3">
+               <span class="input-group-text">$</span>
+               <input class="form-control" id="price" name="price" type="number" min="0" required>
+            </div>
+            <button class="btn btn-success">Add</button>
+         </form>
+      </div>
+
+      <div class="update-book-modal input-group mb-3" hidden>
+         <form class="update-book-form">
+            <div class="input-group mb-3">
+               <span class="input-group-text">Title:</span>
+               <input class="form-control" id="title" name="title" type="text" required>
+            </div>
+            <div class="input-group mb-3">
+               <span class="input-group-text">$</span>
+               <input class="form-control" id="price" name="price" type="number" min="0" required>
+            </div>
+            <button class="btn btn-success">Update</button>
+         </form>
+      </div>
+
+      <div class="book-details-modal">
+         
+      </div>
+
+      <div class="book-list">
+         <table class="table table-responsive table-hover" border="1">
+
+         </table>
+         <div class="page-control mt-3">
+            <nav aria-label="Page navigation example">
+               <ul class="pagination justify-content-center">
+                  <li class="page-item prev-page disabled">
+                     <a class="page-link" href="#" tabindex="-1" onclick="onChangePage('--')">Previous</a>
+                  </li>
+                  <li class="page-item page-num"><a class="page-link" href="#" onclick="onChangePage('0')">1</a></li>
+                  <li class="page-item page-num"><a class="page-link" href="#" onclick="onChangePage('1')">2</a></li>
+                  <li class="page-item next-page">
+                     <a class="page-link" href="#" onclick="onChangePage('++')">Next</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <script src="js/services/util-service.js"></script>
+   <script src="js/services/storage-service.js"></script>
+   <script src="js/services/book-service.js"></script>
+   <script src="js/models/book.js"></script>
+</body>
+</html>

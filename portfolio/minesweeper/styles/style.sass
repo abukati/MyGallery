@@ -1,0 +1,183 @@
+*, *:before, *:after
+   box-sizing: border-box
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
+a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, 
+form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed,
+footer, header, nav, section, video
+   margin: 0
+   padding: 0
+   border: 0
+   font-size: 100%
+   font: inherit
+   vertical-align: baseline
+   text-rendering: optimizeLegibility
+   -webkit-font-smoothing: antialiased
+   text-size-adjust: none
+
+footer, header, nav, section, main
+   display: block
+
+html, body
+   height: 100%
+   overflow-y: hidden
+
+ol, ul
+   list-style: none
+
+blockquote, q
+   quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+   content: ''
+   content: none
+
+input
+   -webkit-appearance: none
+   border-radius: 0
+
+body 
+   background-image: url('../misc/imgs/background.jpg')
+   background-repeat: no-repeat
+   background-size: cover
+
+.container 
+   display: flex
+   flex-direction: row
+   justify-content: center
+   align-items: center
+
+   height: 100%
+
+.difficulty-selector 
+   display: inline-block
+   position: relative
+
+   margin: 3em 2em
+
+   &::after
+      content: '>'
+      font: 20px 'Consolas', monospace
+      font-weight: 900
+      color: black
+      transform: rotate(90deg)
+
+      margin-top: 9px
+      
+      position: absolute
+      right: 8px
+
+   select 
+      appearance: none
+      display: inline-block
+      width: 150px
+      height: 40px
+      padding: 0 10px
+      font-size: 1em
+      font-weight: 600
+      background-color: #fff
+      border: 1px solid black
+      border-radius: 3px
+      
+      option 
+         font-size: 1em
+         font-weight: 600
+
+      &:hover
+         cursor: pointer
+
+
+.game-content 
+   display: flex
+   flex-direction: column
+   
+
+.top-indicators, .bottom-indicators 
+   display: flex
+   justify-content: space-between
+   align-items: center
+   position: relative
+   
+   width: inherit
+   height: 30px
+
+   font-size: .9em
+   font-weight: 700
+
+.bombs p
+   font-size: 1.3em
+   img
+      width: 25px
+
+.board-indicators 
+   display: flex
+   justify-content: space-between
+   align-items: flex-end
+
+   width: 100%
+
+   background-color: silver
+   border-radius: 5px 5px 0 0
+
+   .lives
+      margin-left: 3px
+      width: 20%
+
+   .smiley
+      margin-top: 5px
+
+      img
+         width: 25px
+         cursor: pointer
+
+   .hints
+         width: 20%
+         img
+            cursor: pointer
+
+
+table 
+   display: flex
+   justify-content: center
+   align-items: center
+
+   background-color: silver
+   border: 3px solid silver
+   border-radius: 0 0 5px 5px
+
+tr
+   border: 3px solid black
+   border-radius: 5px
+
+td 
+   width: 35px
+   height: 35px
+
+   font-size: 1em
+   font-weight: 900
+   text-align: center
+   vertical-align: middle
+
+   background-color: grey
+   border: 2.5px solid rgba(0,0,0,.3)
+
+   cursor: pointer
+   
+   img
+      width: 33px
+      height: 32px
+      display: block
+      margin: 0 auto
+
+.clicked 
+   background-color: white
+   border: none
+   cursor: default
+   pointer-events: none
+
+.scoreboard
+   height: 200px
+   margin-left: 3em
+   
+   font-size: 1em
+   font-weight: 600

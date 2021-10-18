@@ -1,0 +1,53 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: black;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* .formLine {
+  margin:10px;
+  padding:10px;
+  background-color: cornflowerblue;
+} */
+
+.game-over, .game-won {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 250px;
+  height: 200px;
+  position: absolute;
+  bottom: 42%;
+  border-radius: 15px;
+  display: none;
+}
+
+.game-over h1, .game-won h1 {
+  font-size: 2.5em;
+}
+
+.game-over button, .game-won button{
+  width: 130px;
+  height: 40px;
+  margin: 25px 0;
+  cursor: pointer;
+  font-size: .9em;
+  font-weight: bold;
+}
